@@ -15,6 +15,7 @@ import { USER_GET } from './store/profile/profile.actions';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isDarkTheme: boolean = false;
 
   observable$: Observable<{}>;
 
