@@ -15,7 +15,7 @@
     "_server:build": "tsc -p ./server",
     "postinstall": "npm run build"
   },
-  "author": "Vlado Tešanović",
+  "author": "Gurmeet Singh",
   "repository": {
     "url": "https://github.com/vladotesanovic/angular2-express-starter"
   },
