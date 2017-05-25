@@ -9,6 +9,10 @@ import { effects, store, instrumentation } from './store';
 import { SharedModule } from './shared/shared.module';
 import { WeatherService } from './weather/weather.service';
 
+//Material releated
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -21,7 +25,13 @@ import { WeatherService } from './weather/weather.service';
     store,
     effects,
     routing,
-    instrumentation
+    instrumentation,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdMenuModule,
+    MdCardModule,
+    MdToolbarModule,
+    MdIconModule
   ],
   providers: [
     WeatherService
@@ -30,4 +40,4 @@ import { WeatherService } from './weather/weather.service';
     AppComponent
   ]
 })
-export class AppModule {}
+export class AppModule { }
