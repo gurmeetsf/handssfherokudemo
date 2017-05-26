@@ -13,10 +13,11 @@ import { WeatherService } from './weather/weather.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
+
 @NgModule({
   declarations: [
     AppComponent
-  ],
+      ],
   imports: [
     BrowserModule,
     SharedModule,
