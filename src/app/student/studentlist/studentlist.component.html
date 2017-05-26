@@ -1,3 +1,36 @@
-<p>
-  studentlist works!
-</p>
+<form class="example-form" [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="First name" formControlName="firstname">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="Last Name" formControlName="lastname">
+    </md-input-container></td>
+  </tr></table>
+
+  <p>
+    <md-input-container class="example-full-width">
+      <textarea mdInput placeholder="Email" formControlName="email"></textarea>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <textarea mdInput placeholder="Address"></textarea>
+    </md-input-container>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="City">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input mdInput placeholder="State">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94086">
+      <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+    </md-input-container></td>
+  </tr></table>
+
+   <button md-raised-button type="submit" [disabled]="studentForm.invalid">Submit</button>
+</form>
