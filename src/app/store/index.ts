@@ -13,19 +13,23 @@ import { environment } from '../../environments/environment';
 import { IWeather, weatherReducer } from './weather/weather.reducer';
 import { WeatherEffects } from './weather/weather.effects';
 import { CommonModule } from '@angular/common';
+import {studentReducer,IStudent} from './student/student.reducer';
+import {StudentEffects} from './student/student.effects';
 
 // all new reducers should be define here
 export interface IAppState {
   feed: IFeed[];
   profile: IProfile;
   weather: IWeather;
+  student : IStudent
 }
 
 // all new reducers should be define here
 const reducers = {
   feed: feedReducer,
   profile: profileReducer,
-  weather: weatherReducer
+  weather: weatherReducer,
+  student:studentReducer
 };
 
 const productionReducer: ActionReducer<IAppState> = combineReducers(reducers);
@@ -56,5 +60,6 @@ export const instrumentation: ModuleWithProviders =
 export const effects: ModuleWithProviders[] = [
   EffectsModule.run(ProfileEffects),
   EffectsModule.run(FeedEffects),
-  EffectsModule.run(WeatherEffects)
+  EffectsModule.run(WeatherEffects),
+  EffectsModule.run(StudentEffects)
 ];
