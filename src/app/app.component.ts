@@ -23,7 +23,7 @@ export class AppComponent {
     this.observable$ = http
       .get('/api/public/simple')
       .map((response: Response) => response.json());
-
+    
     store.dispatch({
       type: USER_GET
     });
